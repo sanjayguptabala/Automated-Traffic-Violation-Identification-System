@@ -30,12 +30,10 @@ Go [here](#quick-starting-the-project) if you don't have time.
     - [Computer Vision](#computer-vision)
     - [Graphical User Interface](#graphical-user-interface)
 - [Contributing](#contributing)
-- [Links and References](#links-and-references)
-- [Author](#author)
 - [Licensing](#licensing)
 
 ## Motivation
-This project is made for the third year second semester System Development (CSE-3200) course.
+This project is made for the third year second semester System Development course.
 
 ## Introduction
 The increasing number of cars in cities can cause high volume of traffic, and implies that traffic violations become more critical nowadays in Bangladesh and also around the world. This causes severe destruction of property and more accidents that may endanger the lives of the people. To solve the alarming problem and prevent such unfathomable consequences, traffic violation detection systems are needed. For which the system enforces proper traffic regulations at all times, and apprehend those who does not comply. A traffic violation detection system must be realized in real-time as the authorities track the roads all the time. Hence, traffic enforcers will not only be at ease in implementing safe roads accurately, but also efficiently; as the traffic detection system detects violations faster than humans. This system can detect traffic light violation in real-time. A user friendly graphical interface is associated with the system to make it simple for the user to operate the system, monitor traffic and take action against the violations of traffic rules.
@@ -125,30 +123,7 @@ Libraries used for graphical user interface:
 The main reason to publish something open source, is that anyone can just jump in and start contributing to my project.
 So If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
 
-## Links and References
-- Project homepage: https://github.com/anmspro/Traffic-Signal-Violation-Detection-System
-- Repository: https://github.com/anmspro/Traffic-Signal-Violation-Detection-System.git
-- Issue tracker: https://github.com/anmspro/Traffic-Signal-Violation-Detection-System/issues
-- G. Ou, Y. Gao and Y. Liu, "Real TimeVehicularTrafficViolationDetectioninTrafficMonitorin gStream," in 2012 IEEE/WIC/ACM , Beijing, China , 2012.
-- X. Wang, L.-M. Meng, B. Zhang, J. Lu and K.-L.Du, "A Video-based Traffic Violation Detection System," in MEC, Shenyang, China, 2013.
-- Joseph Redmon and Ali Farhadi, "YOLOv3: An Incremental Improvement".
-- https://machinelearningmastery.com/how-to-perform-object-detection-with-yolov3-in-keras
-- In case of any help you may need from me, please contact abunomanmd.sakib@gmail.com directly without any hesitation! I will be glad to help you.
 
-## Author
-Abu Noman Md. Sakib, Pias Roy<br>
-abunomanmd.sakib@gmail.com<br>
-pias.kuet@gmail.com<br>
-Student at Department of Computer Science and Engineering<br>
-Khulna University of Engineering & Technology, Khulna<br>
-Bangladesh
-
-<b> Supervised under </b><br>
-Mahmudul Hasan Shauqi<br>
-mahmudulhasanshauqi@gmail.com<br>
-Lecturer<br>
-Dept. of Computer Science and Engineering<br>
-Khulna University of Engineering & Technology<br>
 
 ## Licensing
 The code in this project is licensed under GNU GPLv3 license.
