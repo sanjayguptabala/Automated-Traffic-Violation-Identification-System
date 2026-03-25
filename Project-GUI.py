@@ -4,6 +4,11 @@ from tkinter import filedialog
 import object_detection as od
 import imageio
 import cv2
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PREVIEW_PATH = os.path.join(BASE_DIR, 'Images', 'preview.jpg')
+COPY_PATH = os.path.join(BASE_DIR, 'Images', 'copy.jpg')
 
 class Window(Frame):
     def __init__(self, master=None):
@@ -30,7 +35,7 @@ class Window(Frame):
         analyze.add_command(label="Region of Interest", command=self.regionOfInterest)
         menu.add_cascade(label="Analyze", menu=analyze)
 
-        self.filename = "Images/home.jpg"
+        self.filename = os.path.join(BASE_DIR, "Images", "home.jpg")
         self.imgSize = Image.open(self.filename)
         self.tkimage =  ImageTk.PhotoImage(self.imgSize)
         self.w, self.h = (1366, 768)
@@ -48,9 +53,9 @@ class Window(Frame):
         fps = reader.get_meta_data()['fps'] 
 
         ret, image = cap.read()
-        cv2.imwrite('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg', image)
+        cv2.imwrite(PREVIEW_PATH, image)
 
-        self.show_image('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg')
+        self.show_image(PREVIEW_PATH)
 
 
     def show_image(self, frame):
@@ -98,10 +103,10 @@ class Window(Frame):
             #show created virtual line
             print(self.line)
             print(self.rect)
-            img = cv2.imread('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/preview.jpg')
+            img = cv2.imread(PREVIEW_PATH)
             cv2.line(img, self.line[0], self.line[1], (0, 255, 0), 3)
-            cv2.imwrite('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/copy.jpg', img)
-            self.show_image('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Images/copy.jpg')
+            cv2.imwrite(COPY_PATH, img)
+            self.show_image(COPY_PATH)
 
             ## for demonstration
             # (rxmin, rymin) = self.rect[0]
@@ -189,7 +194,9 @@ class Window(Frame):
 
         reader = imageio.get_reader(video_src)
         fps = reader.get_meta_data()['fps']    
-        writer = imageio.get_writer('G:/Traffic Violation Detection/Traffic Signal Violation Detection System/Resources/output/output.mp4', fps = fps)
+        output_dir = os.path.join(BASE_DIR, 'Resources', 'output')
+        os.makedirs(output_dir, exist_ok=True)
+        writer = imageio.get_writer(os.path.join(output_dir, 'output.mp4'), fps = fps)
             
         j = 1
         while True:
